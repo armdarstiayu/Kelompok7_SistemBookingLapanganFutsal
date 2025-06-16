@@ -11,10 +11,12 @@
         <nav>
             <div class="logo">SELA</div>
             <ul>
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="venues.html">Cari Lapangan</a></li>
-                <li><a href="about.html">Tentang Kami</a></li>
-                <li><a href="contact.html">Kontak</a></li>
+
+                <li><a href="index.php">Beranda</a></li>
+                <li><a href="venues.php">Cari Lapangan</a></li>
+                <li><a href="about.php">Tentang Kami</a></li>
+                <li><a href="contact.php">Kontak</a></li>
+
             </ul>
         </nav>
     </header>
