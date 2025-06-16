@@ -1,0 +1,504 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Menggunakan font modern */
+    margin: 0;
+    padding: 0;
+    background-color: #e6f7ff; /* Biru langit sangat muda sebagai latar belakang halaman */
+    color: #333; /* Warna teks utama */
+}
+
+/* Header & Navigation */
+header {
+    background-color: #4FB3D9; /* Biru langit yang lebih tua untuk header */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15); /* Efek bayangan ringan */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Memisahkan logo dan menu navigasi */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    max-width: 1200px; /* Lebar maksimum konten navigasi */
+    margin: 0 auto; /* Pusatkan navigasi */
+    padding: 0 25px; /* Padding samping */
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-family: cursive;
+    font-weight: bold;
+    letter-spacing: 1px; /* Jarak antar huruf untuk logo */
+}
+
+nav ul {
+    list-style: none; /* Hilangkan bullet point daftar */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Jadikan item menu sejajar */
+}
+
+nav ul li {
+    margin-left: 30px; /* Jarak antar item menu */
+}
+
+nav ul li a {
+    color: white; /* Warna teks link */
+    text-decoration: none; /* Hilangkan garis bawah link */
+    font-weight: 600; /* Ketebalan font */
+    padding: 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Transisi halus saat hover */
+}
+
+nav ul li a:hover {
+    color: #cceeff; /* Biru langit yang lebih terang saat hover */
+    border-bottom: 2px solid #cceeff; /* Garis bawah saat hover */
+}
+
+/* Hero Section (Halaman Beranda) */
+.hero {
+    background: linear-gradient(to right, #87CEEB, #ADD8E6); /* Gradien biru langit */
+    color: #333;
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom-left-radius: 50px; /* Sudut melengkung di bagian bawah */
+    border-bottom-right-radius: 50px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Efek bayangan */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #004d66; /* Biru tua untuk judul hero */
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.5); /* Efek bayangan teks */
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center; /* Pusatkan elemen pencarian */
+    gap: 15px; /* Jarak antar input dan tombol */
+}
+
+.search-bar input {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px; /* Sudut membulat */
+    width: 65%;
+    max-width: 600px;
+    font-size: 1.1rem;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1); /* Bayangan dalam */
+    outline: none; /* Hilangkan outline saat fokus */
+}
+
+.search-bar button {
+    background-color: #2196F3; /* Biru utama untuk tombol */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer; /* Ubah kursor saat diarahkan */
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transisi saat hover */
+}
+
+.search-bar button:hover {
+    background-color: #1976D2; /* Biru yang sedikit lebih gelap saat hover */
+    transform: translateY(-2px); /* Efek naik sedikit saat hover */
+}
+
+/* Page Header (untuk halaman selain beranda) */
+.page-header {
+    background: linear-gradient(to right, #4FB3D9, #87CEEB); /* Gradien biru langit */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9; /* Sedikit transparan */
+}
+
+/* Bagian Umum untuk Section */
+section {
+    padding: 40px 25px;
+    max-width: 1200px;
+    margin: 0 auto; /* Pusatkan konten section */
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #004d66; /* Biru tua untuk judul section */
+    position: relative;
+}
+
+section h2::after {
+    content: ''; /* Pseudo-elemen untuk garis bawah judul */
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #2196F3; /* Warna garis bawah */
+    margin: 15px auto 0; /* Pusatkan garis bawah */
+    border-radius: 2px;
+}
+
+/* Grid Kategori & Venue */
+.categories-grid, .venues-grid {
+    display: grid;
+    /* Membuat kolom responsif: minimal 280px, bisa menyesuaikan */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Jarak antar item grid */
+    margin-top: 30px;
+}
+
+.category-item, .venue-card {
+    background-color: white;
+    border-radius: 12px; /* Sudut membulat */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Efek bayangan */
+    overflow: hidden; /* Pastikan konten tidak keluar dari radius */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi halus saat hover */
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.category-item:hover, .venue-card:hover {
+    transform: translateY(-8px); /* Efek naik saat hover */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Bayangan lebih gelap saat hover */
+}
+
+.category-item img, .venue-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Pastikan gambar mengisi area tanpa terdistorsi */
+    display: block;
+    background-color: #e0f2f7; /* Warna latar belakang placeholder gambar */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.category-item h3, .venue-card h3 {
+    font-size: 1.6rem;
+    margin: 0 0 10px;
+    color: #004d66;
+    padding: 0 15px;
+}
+
+.venue-card p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding: 0 15px;
+}
+
+.venue-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2196F3; /* Warna biru untuk harga */
+    margin-bottom: 15px;
+}
+
+.venue-card button, .booking-button {
+    background-color: #4CAF50; /* Tombol hijau untuk aksi */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.venue-card button:hover, .booking-button:hover {
+    background-color: #43A047;
+    transform: translateY(-2px);
+}
+
+/* Halaman Daftar Venue (`venues.html`) */
+.venue-list {
+    display: flex;
+    flex-direction: column; /* Susun filter dan grid secara kolom */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 25px;
+}
+
+.filters {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: left; /* Teks filter rata kiri */
+}
+
+.filters h3 {
+    font-size: 1.8rem;
+    color: #004d66;
+    margin-bottom: 20px;
+}
+
+.filters label {
+    display: block; /* Label di baris baru */
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.filters input, .filters select {
+    width: calc(100% - 20px); /* Lebar penuh dikurangi padding */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.filters input:focus, .filters select:focus {
+    border-color: #2196F3; /* Warna border saat fokus */
+}
+
+.filters button {
+    background-color: #2196F3;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.filters button:hover {
+    background-color: #1976D2;
+}
+
+/* Halaman Detail Venue (`detail.html`) */
+.venue-detail-content {
+    display: flex;
+    flex-wrap: wrap; /* Izinkan wrap pada layar kecil */
+    gap: 40px; /* Jarak antar kolom */
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    text-align: left; /* Teks rata kiri */
+}
+
+.venue-image {
+    flex: 1; /* Fleksibel, ambil bagian yang tersisa */
+    min-width: 300px; /* Lebar minimum */
+}
+
+.venue-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.venue-info {
+    flex: 1.5; /* Ambil lebih banyak ruang */
+    min-width: 300px;
+}
+
+.venue-info h2 {
+    font-size: 2.5rem;
+    color: #004d66;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.venue-info p {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    line-height: 1.6; /* Jarak antar baris */
+}
+
+.venue-info p .label {
+    font-weight: bold;
+    color: #333;
+    margin-right: 5px;
+}
+
+/* Blok Konten (untuk halaman Tentang Kami/Kontak) */
+.content-block {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.content-block h3 {
+    font-size: 1.8rem;
+    color: #004d66;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: calc(100% - 24px); /* Lebar penuh dikurangi padding */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #2196F3;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Hanya bisa diresize vertikal */
+    min-height: 120px;
+}
+
+.contact-form button[type="submit"] {
+    background-color: #2196F3;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #eee; /* Garis putus-putus */
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Warna gelap untuk footer */
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    font-size: 0.95rem;
+}
+
+/* Responsive Adjustments (Media Queries) */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    .venues-grid {
+        /* Saat layar menengah, bisa jadi 2 kolom atau sesuai auto-fit */
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .venue-detail-content {
+        flex-direction: column; /* Tumpuk konten detail di layar kecil */
+        text-align: center;
+    }
+    .venue-info h2 {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Tumpuk navigasi di layar sangat kecil */
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .hero {
+        padding: 60px 20px;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-bar input {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+    .search-bar button {
+        width: 90%;
+    }
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    section h2 {
+        font-size: 2rem;
+    }
+    .categories-grid, .venues-grid {
+        grid-template-columns: 1fr; /* Satu kolom untuk grid di layar sangat kecil */
+    }
+    .filters {
+        padding: 20px;
+    }
+    .venue-detail-content {
+        padding: 20px;
+    }
+}
